@@ -79,6 +79,56 @@ RiceMill Management System เป็นระบบจัดการโรง�
 
 ---
 
+## 🐳 Docker Deployment
+
+### วิธีรันด้วย Docker
+
+1. **Build และ Start Container**
+
+   ```bash
+   docker-compose up -d
+   ```
+
+2. **เปิด Browser**
+
+   ```
+   http://localhost:8080
+   ```
+
+3. **ดู Logs**
+
+   ```bash
+   docker-compose logs -f
+   ```
+
+4. **หยุด Container**
+   ```bash
+   docker-compose down
+   ```
+
+### Docker Commands ที่มีประโยชน์
+
+| Command                           | Description                |
+| --------------------------------- | -------------------------- |
+| `docker-compose up -d`            | Start container (detached) |
+| `docker-compose down`             | Stop container             |
+| `docker-compose logs -f`          | View live logs             |
+| `docker-compose restart`          | Restart container          |
+| `docker-compose build --no-cache` | Rebuild image              |
+
+### Environment Variables
+
+| Variable             | Default        | Description     |
+| -------------------- | -------------- | --------------- |
+| `PHP_DISPLAY_ERRORS` | `0`            | Show PHP errors |
+| `TZ`                 | `Asia/Bangkok` | Server timezone |
+
+### Database Persistence
+
+ข้อมูล SQLite จะถูกเก็บใน Docker Volume ชื่อ `ricemill_database` เพื่อไม่ให้ข้อมูลหายเมื่อหยุด container
+
+---
+
 ## 📁 โครงสร้างโปรเจค
 
 ```
