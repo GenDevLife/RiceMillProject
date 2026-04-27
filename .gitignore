@@ -30,6 +30,7 @@ vendor/
 bower_components/
 
 # ----- Build / Cache -----
+dist/
 *.cache
 *.tmp
 *.temp
@@ -48,6 +49,9 @@ yarn-error.log*
 .env.local
 .env.*.local
 config.local.php
+venv/
+results/
+_pycache_/
 
 # ----- PHP Specific -----
 *.phar
@@ -73,6 +77,8 @@ uploads/*
 !database/*.sql
 *.sqlite
 *.sqlite3
+*.db-shm
+*.db-wal
 
 # ----- Old Files (Legacy - to be removed) -----
 # These can be tracked but marked for removal
